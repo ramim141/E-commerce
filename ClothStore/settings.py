@@ -11,6 +11,9 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
+import dj_database_url
+
+import os
 import environ
 env = environ.Env()
 environ.Env.read_env()
@@ -33,7 +36,7 @@ CSRF_TRUSTED_ORIGINS = ['https://e-commerce-akhu.onrender.com','https://*.127.0.
 # Application definition
 
 INSTALLED_APPS = [
-    
+    'dj_database_url',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
