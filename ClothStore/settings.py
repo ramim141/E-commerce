@@ -84,11 +84,17 @@ WSGI_APPLICATION = 'ClothStore.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.config(
+        # Feel free to alter this value to suit your needs.
+        default='postgresql://clothostore_user:N2TAgT0wITAe5tTJ5jV66JkF6p97kluz@dpg-cq5d5do8fa8c7385icu0-a.oregon-postgres.render.com/clothostore',
+    )
 }
 
 REST_FRAMEWORK = {
