@@ -27,6 +27,7 @@ SECRET_KEY = env("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 ALLOWED_HOSTS = ["*"]
+CSRF_TRUSTED_ORIGINS = ['https://e-commerce-akhu.onrender.com','https://*.127.0.0.1']
 
 
 # Application definition
@@ -57,6 +58,9 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'ClothStore.urls'
+CORS_ORIGIN_ALLOW_ALL = True
+CSRF_TRUSTED_ORIGINS = ['https://e-commerce-akhu.onrender.com']
+
 
 TEMPLATES = [
     {
