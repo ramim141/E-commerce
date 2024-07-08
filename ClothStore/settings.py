@@ -36,6 +36,7 @@ CSRF_TRUSTED_ORIGINS = ['https://e-commerce-akhu.onrender.com','https://*.127.0.
 # Application definition
 
 INSTALLED_APPS = [
+    'corsheaders',
     'dj_database_url',
     'django.contrib.admin',
     'django.contrib.auth',
